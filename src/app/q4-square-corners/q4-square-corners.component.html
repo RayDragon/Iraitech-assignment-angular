@@ -1,0 +1,34 @@
+<br>
+<br>
+<br>
+<div class="container">
+    <div class="rectangle flex-row">
+        <div class="flex-item flex-col">
+            <div class="flex-item w3-black flex-row">
+                {{value}}
+            </div>
+            <div class="flex-item"></div>
+            <div class="flex-item w3-black flex-row">
+                {{value}}
+            </div>
+        </div>
+        <div class="flex-item flex-col">
+            <div class="flex-item"></div>
+            <div class="flex-item flex-row">
+                <mat-form-field appearance="standard">
+                <input matInput [(ngModel)]="value" style="text-align: center;">
+                </mat-form-field>
+            </div>
+            <div class="flex-item"></div>
+        </div>
+        <div class="flex-item flex-col">
+            <div class="flex-item flex-row w3-black">
+                {{value}}
+            </div>
+            <div class="flex-item"></div>
+            <div class="flex-item flex-row w3-black">
+                {{value}}
+            </div>
+        </div>
+    </div>
+</div>

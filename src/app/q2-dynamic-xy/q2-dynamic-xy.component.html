@@ -1,0 +1,14 @@
+<br>
+<div class="flex-row w3-container w3-yellow w3-text-blue" style="padding: 15px; align-items: center;">
+  <mat-form-field appearance="standard">
+    <mat-label>Name of X</mat-label>
+    <input matInput #nX>
+  </mat-form-field>
+  <button mat-icon-button color="primary" (click)="addX(nX.value)">
+    <mat-icon>add</mat-icon>
+  </button>
+</div>
+
+<div class="container flex-item flex-row" style="overflow: auto; flex-wrap:wrap;">
+    <app-x *ngFor="let x of getNames()" style="margin: 3px; max-width: 300px;" [name]="x" [y]="Xs[x]"></app-x>
+</div>

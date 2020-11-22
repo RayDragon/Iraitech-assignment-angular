@@ -1,0 +1,38 @@
+<mat-drawer-container class="example-container" autosize style="height: 100%;">
+  <mat-drawer #drawer class="example-sidenav" mode="side" style="max-width: 200px;" opened>
+    <mat-nav-list>
+    <mat-list-item routerLink="q1">
+      <a matLine>Question 1</a>
+      <button mat-icon-button >
+          <mat-icon>keyboard_arrow_right</mat-icon>
+       </button>
+    </mat-list-item>
+    <mat-list-item routerLink="q2">
+      <a matLine >Question 2</a>
+      <button mat-icon-button >
+          <mat-icon>keyboard_arrow_right</mat-icon>
+       </button>
+    </mat-list-item>
+    <mat-list-item routerLink="q3">
+      <a matLine routerLink="q3">Question 3</a>
+      <button mat-icon-button >
+          <mat-icon>keyboard_arrow_right</mat-icon>
+       </button>
+    </mat-list-item>
+    <mat-list-item routerLink="q4">
+      <a matLine>Question 4</a>
+      <button mat-icon-button >
+          <mat-icon>keyboard_arrow_right</mat-icon>
+       </button>
+    </mat-list-item>
+    </mat-nav-list>
+  </mat-drawer>
+
+  <div class="example-sidenav-content flex-col" style="height: 100%;">
+    <router-outlet></router-outlet>
+    <!--button type="button" mat-button (click)="drawer.toggle()">
+      Toggle sidenav
+    </button-->
+  </div>
+
+</mat-drawer-container>

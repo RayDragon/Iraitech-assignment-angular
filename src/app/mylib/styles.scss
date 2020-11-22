@@ -1,0 +1,25 @@
+@import "./w3.scss";
+@import "./theme.scss";
+@import "~@angular/material/theming";
+@include mat-core();
+$account-primary: mat-palette($mat-indigo);
+$account-accent: mat-palette($mat-pink, A200, A100, A400);
+$account-warn: mat-palette($mat-red);
+$account-theme: mat-light-theme(
+  $account-primary,
+  $account-accent,
+  $account-warn
+);
+@include angular-material-theme($account-theme);
+
+@import "./themes.scss";
+
+html,
+body,
+app-root {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}

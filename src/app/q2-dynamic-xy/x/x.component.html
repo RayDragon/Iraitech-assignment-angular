@@ -1,0 +1,17 @@
+<mat-toolbar>
+  <mat-toolbar-row class="flex-row">
+    <mat-form-field appearance="standard" class="flex-item">
+      <input matInput [(ngModel)]="name" />
+    </mat-form-field>
+    <button mat-button color="primary" (click)="save()">
+      <mat-icon>save</mat-icon>
+      
+    </button>
+    <button mat-icon-button color="primary" (click)="y.push('')">
+        <mat-icon>add</mat-icon>
+    </button>
+  </mat-toolbar-row>
+</mat-toolbar>
+<mat-card>
+    <app-y *ngFor="let ys of y" [parentName]="name" [value]="ys"></app-y>
+</mat-card>

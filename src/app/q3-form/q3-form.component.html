@@ -1,0 +1,41 @@
+<br />
+
+<div class="container">
+  <mat-card>
+    <mat-card-title>Add Phone Numbers</mat-card-title>
+    <mat-card-content>
+        <ng-container
+          *ngFor="let _item of getKeys(); let i = index"
+        >
+          <div class="flex-row">
+            <mat-form-field appearance="standard" class="flex-item">
+              <input
+                matInput
+                #me
+                (change)="phones[i] = me.value"
+                type="tel"
+                value="{{phones[i]}}"
+              />
+            </mat-form-field>
+            <!-- 'mat-button','mat-raised-button', 'mat-flat-button','mat-stroked-button','mat-icon-button','mat-fab','mat-mini-fab' -->
+            <button mat-icon-button (click)="delPhone(i)">X</button>
+          </div>
+        </ng-container>
+      
+    </mat-card-content>
+    <mat-card-content>
+      <div class="flex-row">
+        <button
+          mat-raised-button
+          color="primary"
+          (click)="addPhone()"
+        >
+          <mat-icon>add</mat-icon>
+          Add another phone number
+        </button>
+        <div class="flex-item"></div>
+        <button mat-raised-button color="primary" (click)="submit()">Submit</button>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

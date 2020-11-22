@@ -1,0 +1,21 @@
+<br><br>
+<div class="container">
+  <mat-card>
+    <mat-card-title>Question 1</mat-card-title>
+    <mat-card-subtitle
+      >Series ... 2, 3, 10, 15, 26, 35, 50, 63, 82
+    </mat-card-subtitle>
+    <mat-card-content class="flex-col">
+      <mat-form-field appearance="standard">
+        <mat-label>Value of n</mat-label>
+        <input matInput #n type="number" />
+      </mat-form-field>
+      <br />
+      <button mat-button (click)="seriesValue(n.value)">
+        Get Result
+      </button>
+      <br />
+      <h1 *ngIf="result">{{ result }}</h1>
+    </mat-card-content>
+  </mat-card>
+</div>
